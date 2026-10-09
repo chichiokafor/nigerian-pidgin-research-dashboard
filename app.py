@@ -7,6 +7,23 @@ st.set_page_config(
     layout="wide"
 )
 
+st.sidebar.title("🔬 Research Navigation")
+
+section = st.sidebar.radio(
+    "Explore My Research",
+    [
+        "Research Overview",
+        "Dataset Exploration",
+        "Model Experiments",
+        "Research Findings",
+        "Future Research"
+    ]
+)
+
+st.sidebar.divider()
+st.sidebar.caption("Nigerian Pidgin NLP Research Lab")
+
+
 st.title("🔬 Nigerian Pidgin Research Lab")
 st.subheader("Sentiment Analysis Using Machine Learning and Transformer-Based Models")
 
