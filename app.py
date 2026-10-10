@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(page_title="Nigerian Pidgin Research Lab", page_icon="🔬", layout="wide")
 
@@ -20,8 +21,20 @@ if section == "Research Overview":
 elif section == "Dataset Exploration":
     st.title("📊 Dataset Exploration")
     st.write("NaijaSenti Nigerian Pidgin dataset splits:")
-    st.dataframe({"Split": ["Training", "Development", "Test"], "Examples": [5121, 1281, 4154]}, hide_index=True)
-    st.write("Linguistic challenges include code-mixing and orthographic variation.")
+    counts = pd.DataFrame({
+        "Split": ["Training", "Development", "Test"],
+        "Negative": [3241, 813, 2326],
+        "Positive": [1808, 447, 1397],
+        "Neutral": [72, 21, 431],
+    })
+    counts["Total"] = counts[["Negative", "Positive", "Neutral"]].sum(axis=1)
+    st.dataframe(counts, hide_index=True)
+    st.subheader("Sentiment distribution by dataset split")
+    st.bar_chart(counts.set_index("Split")[["Negative", "Positive", "Neutral"]])
+    st.caption("Counts calculated from the uploaded NaijaSenti Nigerian Pidgin train.tsv, dev.tsv and test.tsv files.")
+    st.subheader("Class imbalance")
+    st.write("The training set contains only 72 neutral examples out of 5,121 (1.4%). This pronounced class imbalance may contribute to difficulties identifying neutral sentiment, but further experiments are needed to establish its effect.")
+    st.write("Other linguistic challenges include code-mixing and orthographic variation.")
 
 elif section == "Model Experiments":
     st.title("🧪 Model Experiments")
