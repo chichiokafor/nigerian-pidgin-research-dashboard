@@ -107,8 +107,11 @@ elif section == 'Research Findings':
     
 
 elif section == 'Future Research':
-    st.title('🚀 Future Research')
-    st.write('Next steps include consistent evaluation across models, language-aware preprocessing and further investigation of multilingual transformer models.')
+    st.title("Future Research")
+    st.write("Next steps include completing AfriBERTa training and evaluation, comparing models under a consistent evaluation protocol, and examining neutral-class errors.")
+    st.write("Further experiments will explore how code-mixing and spelling variation affect sentiment classification.")
+    
+
 
 st.divider()
 st.link_button('View My Research on GitHub', 'https://github.com/chichiokafor/Sentiment-Analysis-of-Nigerian-Pidgin-Using-Machine-Learning-and-Transformer-Based-Models-')
