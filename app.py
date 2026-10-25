@@ -29,7 +29,7 @@ if section == 'Research Overview':
     st.write('An interactive research portfolio exploring Nigerian Pidgin sentiment datasets, machine-learning experiments, and research findings.')
     st.info('Explore the Dataset Exploration section to search real labelled tweets.')
     st.subheader("About this dashboard")
-    st.write("Explore Nigerian Pidgin sentiment distributions, search tweets by keyword and sentiment label, and review preliminary results from Logistic Regression, Linear SVM, and AfriBERTa Base.")
+    st.write("Explore Nigerian Pidgin sentiment distributions, search tweets by keyword and sentiment label, review preliminary Logistic Regression and Linear SVM results, and follow progress on the AfriBERTa Base experiment.")
     st.caption("Tweet labels displayed in Dataset Exploration come from the uploaded dataset; they are not live model predictions.")
     st.subheader("Dataset source")
     st.write("This dashboard explores the Nigerian Pidgin portion of NaijaSenti using the training, development, and test TSV files included in this project.")
