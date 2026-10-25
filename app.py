@@ -35,6 +35,9 @@ if section == 'Research Overview':
     st.write("This dashboard explores the Nigerian Pidgin portion of NaijaSenti using the training, development, and test TSV files included in this project.")
     st.markdown("**Reference:** Muhammad et al. (2022). *NaijaSenti: A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.*")
     st.link_button("Read the NaijaSenti paper", "https://aclanthology.org/2022.lrec-1.63/")
+    st.subheader("Limitations and ongoing work")
+    st.write("The training data contains relatively few neutral examples. Code-mixing and spelling variation are additional challenges being investigated.")
+    st.write("Model results are preliminary. Consistent evaluation across models and further class-level analysis are needed before drawing firm conclusions.")
 elif section == 'Dataset Exploration':
     st.title('📊 Dataset Exploration')
     datasets = {name: load_split(file) for name, file in SPLITS.items()}
