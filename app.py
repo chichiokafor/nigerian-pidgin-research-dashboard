@@ -28,6 +28,9 @@ if section == 'Research Overview':
     st.caption("Built by Chichi Okafor as part of my Data Science internship at DataraFlow.")
     st.write('An interactive research portfolio exploring Nigerian Pidgin sentiment datasets, machine-learning experiments, and research findings.')
     st.info('Explore the Dataset Exploration section to search real labelled tweets.')
+    st.subheader("About this dashboard")
+    st.write("Explore Nigerian Pidgin sentiment distributions, search tweets by keyword and sentiment label, and review preliminary results from Logistic Regression, Linear SVM, and AfriBERTa Base.")
+    st.caption("Tweet labels displayed in Dataset Exploration come from the uploaded dataset; they are not live model predictions.")
 
 elif section == 'Dataset Exploration':
     st.title('📊 Dataset Exploration')
