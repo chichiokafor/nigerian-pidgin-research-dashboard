@@ -68,13 +68,34 @@ elif section == 'Dataset Exploration':
         st.write('Other linguistic challenges include code-mixing and orthographic variation.')
 
 elif section == 'Model Experiments':
-    st.title('🧪 Model Experiments')
-    scores = pd.DataFrame({'Model': ['Logistic Regression', 'Linear SVM', 'AfriBERTa Base'], 'Macro-F1': [0.4309, 0.4134, 0.4154]})
+    st.title("Model Experiments")
+    st.subheader("Preliminary development-set results")
+
+    scores = pd.DataFrame({
+        "Model": ["Logistic Regression", "Linear SVM"],
+        "Macro-F1": [0.429883, 0.413177]
+    })
+
     st.dataframe(scores, hide_index=True, use_container_width=True)
-    st.subheader('Preliminary Macro-F1 scores')
-    st.bar_chart(scores.set_index('Model'), y='Macro-F1', horizontal=True)
-    st.warning('Evaluation conditions differ between experiments. These scores are preliminary and must not be treated as a fair ranking of the models.')
-    st.write('A consistent evaluation protocol is needed before drawing definitive comparisons. Class-level precision, recall and confusion matrices can be added when verified results are available.')
+    st.bar_chart(
+        scores.set_index("Model"),
+        y="Macro-F1",
+        horizontal=True
+    )
+
+    st.write("Both baselines use TF-IDF features and balanced class weights. They were trained on 3,469 cleaned training examples and evaluated on 1,281 development examples.")
+    st.caption("Dataset Exploration displays the original uploaded splits. The model training data was filtered separately to remove overlap with evaluation texts, conflicting labels, and duplicate tweets.")
+
+    st.warning("Neither baseline predicted the neutral class in these saved development results. Further investigation is needed.")
+    st.info("AfriBERTa Base: model and training setup prepared. Its evaluation score is pending verification.")
+    st.caption("These are preliminary development results, not final test-set results.")
+    
+    
+    
+    
+    
+    
+
 
 elif section == 'Research Findings':
     st.title('🧠 Research Findings')
