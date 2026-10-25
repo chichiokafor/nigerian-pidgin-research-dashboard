@@ -86,7 +86,7 @@ elif section == 'Model Experiments':
     st.write("Both baselines use TF-IDF features and balanced class weights. They were trained on 3,469 cleaned training examples and evaluated on 1,281 development examples.")
     st.caption("Dataset Exploration displays the original uploaded splits. The model training data was filtered separately to remove overlap with evaluation texts, conflicting labels, and duplicate tweets.")
 
-    st.warning("Neither baseline predicted the neutral class in these saved development results. Further investigation is needed.")
+    st.write("In these baseline experiments, neither model predicted the neutral class on the development set.")
     st.info("AfriBERTa Base: model and training setup prepared. Evaluation results are not included in this dashboard yet.")
     st.caption("These are preliminary development results, not final test-set results.")
     
