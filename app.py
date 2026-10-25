@@ -25,6 +25,7 @@ st.sidebar.caption('Nigerian Pidgin NLP Research Lab')
 if section == 'Research Overview':
     st.title('🔬 Nigerian Pidgin Research Lab')
     st.subheader('Sentiment Analysis Using Machine Learning and Transformer-Based Models')
+    st.caption("Built by Chichi Okafor as part of my Data Science internship at DataraFlow.")
     st.write('An interactive research portfolio exploring Nigerian Pidgin sentiment datasets, machine-learning experiments, and research findings.')
     st.info('Explore the Dataset Exploration section to search real labelled tweets.')
 
