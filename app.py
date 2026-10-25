@@ -87,7 +87,7 @@ elif section == 'Model Experiments':
     st.caption("Dataset Exploration displays the original uploaded splits. The model training data was filtered separately to remove overlap with evaluation texts, conflicting labels, and duplicate tweets.")
 
     st.warning("Neither baseline predicted the neutral class in these saved development results. Further investigation is needed.")
-    st.info("AfriBERTa Base: model and training setup prepared. Its evaluation score is pending verification.")
+    st.info("AfriBERTa Base: model and training setup prepared. Evaluation results are not included in this dashboard yet.")
     st.caption("These are preliminary development results, not final test-set results.")
     
     
