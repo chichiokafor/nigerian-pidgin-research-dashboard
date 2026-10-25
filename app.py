@@ -98,9 +98,13 @@ elif section == 'Model Experiments':
 
 
 elif section == 'Research Findings':
-    st.title('🧠 Research Findings')
-    st.write('Initial experiments highlight challenges in sentiment classification, particularly the neutral class, alongside code-mixing and orthographic variation.')
-    st.write('These findings are preliminary and require further evaluation.')
+    st.title("Research Findings")
+    st.write("After removing training tweets that overlapped with evaluation texts, excluding conflicting labels, and removing duplicates, 3,469 training examples remained.")
+    st.write("On 1,281 development examples, TF-IDF with Logistic Regression achieved Macro-F1 of 0.4299, while TF-IDF with Linear SVM achieved 0.4132.")
+    st.write("In these baseline experiments, neither model predicted the neutral class on the development set.")
+    st.caption("These findings describe the saved baseline runs. AfriBERTa evaluation results are not included yet.")
+    
+    
 
 elif section == 'Future Research':
     st.title('🚀 Future Research')
