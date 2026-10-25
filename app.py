@@ -9,7 +9,7 @@ LABELS = ['negative', 'neutral', 'positive']
 
 @st.cache_data
 def load_split(filename):
-    path = BASE / 'data' / filename
+    path = BASE / filename
     if not path.exists():
         return None
     df = pd.read_csv(path, sep='\t', dtype=str)
